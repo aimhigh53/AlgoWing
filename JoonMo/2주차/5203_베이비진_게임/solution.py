@@ -8,26 +8,36 @@
 #
 # 이때는 카드를 모두 가져갈 때 까지 run이나 triplet이 없으므로 무승부가 된다.
 
-# 런타임 에러
-
 import os
 import sys
 curr_dir = os.path.dirname(__file__)
 sys.stdin = open(curr_dir + '\input.txt', 'r')
 
 def check_run(lst):
-    for i in range(len(lst)):
-        if i+2 <= len(lst):
-            if lst[i] > 0 and lst[i+1] > 0 and lst[i+2] > 0:
+    temp = 0
+    for i in lst:
+        if i != 0:
+            temp += 1
+            if temp >= 3:
                 return True
+        else:
+            temp = 0
+    return False
+    # for i in range(len(lst)):
+    #     if i+2 <= len(lst):
+    #         if lst[i] > 0 and lst[i+1] > 0 and lst[i+2] > 0:
+    #             return True
+    # return False
 
 def check_triplet(lst):
     if 3 in lst:
         return True
+    return False
 
 def check_win(lst):
     if check_run(lst) or check_triplet(lst):
         return True
+    return False
 
 T = int(input())
 for test_case in range(1, T + 1):
@@ -37,23 +47,19 @@ for test_case in range(1, T + 1):
     player2 = [0 for _ in range(10)]
 
     answer = 0
-    for _ in range(2):
-        player1[cards.pop(0)] += 1
-        player2[cards.pop(0)] += 1
-    # print(player1, player2)
-
-    for _ in range(4):
-        player1[cards.pop(0)] += 1
-        player2[cards.pop(0)] += 1
+    for i in range(6):
+        tmp1 = cards[2*i]
+        player1[tmp1] += 1
+        tmp2 = cards[2*i +1]
+        player2[tmp2] += 1
         # print(player1, player2)
-        if check_win(player1):
-            if check_win(player2):
-                break
-            else:
+
+        if i>=2:
+            if check_win(player1):
                 answer = 1
                 break
-        if check_win(player2):
-            answer = 2
-            break
+            elif check_win(player2):
+                answer = 2
+                break
 
     print('#{} {}'.format(test_case, answer))
