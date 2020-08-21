@@ -19,7 +19,7 @@ for test_case in range(1,T+1):
             if hex_dict[i] & num:
                 answer += '1'
             else:
-                answer +='0'
+                answer += '0'
             num >>= 1
         
 
