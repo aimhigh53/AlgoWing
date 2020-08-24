@@ -27,3 +27,4 @@ for test_case in range(1,T+1):
     print("#",test_case,sep='',end=' ')
     print(quicksort(unsorted_list)[N//2])
 
+#  1개 케이스 계속 오류남
