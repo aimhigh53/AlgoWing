@@ -20,3 +20,6 @@ for test_case in range(1,T+1):
             max=count_dic[i]
             key=i
     print("#{} {} {}".format(test_case,key,max))
+
+
+#카운트 안쓰고 해보고 싶었음,,딕셔너리 이용도 할겸,,
