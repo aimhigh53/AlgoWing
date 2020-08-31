@@ -1,4 +1,5 @@
 # 가능한 연산 : +1 -1 *2 -10
+
 from collections import deque
 
 t = int(input())
@@ -21,22 +22,21 @@ def plus1(x):
     if(0 <= x + 1 <= maxdist and dist[x + 1] == -1):
         q.append(x + 1)
         dist[x + 1] = dist[x] + 1
-def minus1(x) :
+def minus1(x):
     if (0 <= x - 1 <= maxdist and dist[x - 1] == -1):
         q.append(x - 1)
         dist[x - 1] = dist[x] + 1
-def times2(x) :
+def times2(x):
     if (0 <= x * 2 <= maxdist and dist[x * 2] == -1):
         q.append(x * 2)
         dist[x * 2] = dist[x] + 1
-def minus10(x) :
+def minus10(x):
     if (0 <= x - 10 <= maxdist and dist[x - 10] == -1):
         q.append(x - 10)
         dist[x - 10] = dist[x] + 1
 
-
 for tc in range(t):
-    n, m = map(int, input().split())
+    n, m = map(int, input().split())  # n : 시작 지점, m : 도착 지점
     dist = [-1]*(maxdist+1)
     q = deque()
     bfs(n)
