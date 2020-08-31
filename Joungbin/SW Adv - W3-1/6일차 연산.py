@@ -1,6 +1,5 @@
 # 가능한 연산 : +1 -1 *2 -10
 from collections import deque
-# from time import time
 
 t = int(input())
 maxdist = 10**6
@@ -38,9 +37,7 @@ def minus10(x) :
 
 for tc in range(t):
     n, m = map(int, input().split())
-    # start=time()
     dist = [-1]*(maxdist+1)
     q = deque()
     bfs(n)
     print('#%d' % (tc+1), dist[m])
-    # print('Time :', time()-start)
