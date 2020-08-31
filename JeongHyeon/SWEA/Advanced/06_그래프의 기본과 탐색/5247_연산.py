@@ -1,5 +1,7 @@
 ## 5247_연산
 # https://swexpertacademy.com/main/learn/course/lectureProblemViewer.do
+# 실패애애애애애~~
+# 무엇이 문제일까핳하하하하하
 
 def operator (number, i) :
     if i == 0 :
