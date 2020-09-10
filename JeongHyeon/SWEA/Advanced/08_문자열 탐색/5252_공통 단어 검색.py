@@ -3,14 +3,14 @@
 
 T = int(input())
 for test_case in range(1, T + 1):
-    A, B = map(int, input().split())
+    A_len, B_len = map(int, input().split())
 
     A_list = []
-    for _ in range(A) :
+    for _ in range(A_len) :
         A_list.append(input())
 
     B_list = []
-    for _ in range(B) :
+    for _ in range(B_len) :
         B_list.append(input())
 
     answer = 0
