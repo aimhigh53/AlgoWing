@@ -1,3 +1,5 @@
+# 볼 거면 보시고, 아니면 말고...
+
 import sys
 from collections import deque
 

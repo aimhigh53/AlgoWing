@@ -1,3 +1,5 @@
+# 미리 넣어둘 테니
+
 import sys
 
 sys.setrecursionlimit(10 ** 9)

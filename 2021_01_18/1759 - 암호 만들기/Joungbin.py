@@ -1,3 +1,5 @@
+# 1달 후에 보죠.
+
 from itertools import combinations as com
 
 n, m = map(int, input().split())
