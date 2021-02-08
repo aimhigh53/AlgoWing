@@ -4,7 +4,7 @@ edge_num=int(input())
 computers=[]
 for _ in range(edge_num):
     a,b=map(int,input().split())
-    computers.append([a,석b])
+    computers.append([a,b])
     computers.append([b,a])
 
 computers.sort(key= lambda x:x[0])
